@@ -39,10 +39,78 @@ Claude Code は AI 駆動の開発支援ツールです。このディレクト�
 - `serena-expert.md` - エリート開発エージェント
 - `software-architect-gcp.md` - GCP 専門ソフトウェアアーキテクト
 
-#### `commands/` - カスタムコマンド定義
+#### `commands/` - カスタムコマンド定義（48コマンド）
 
-- `optimize.md` - コードパフォーマンス分析コマンド
-- `fix-issue.md` - Issue修正用ワークフローコマンド
+**開発ワークフロー**
+- `2-commit-fast.md` - 高速コミットワークフロー
+- `commit-message.md` - コミットメッセージ作成
+- `commit.md` - 一般的なコミット処理
+- `semantic-commit.md` - セマンティックコミット
+
+**Issue・PR管理**
+- `analyze-issue.md` - Issue分析
+- `bug-fix.md` - バグ修正ワークフロー
+- `fix-error.md` - エラー修正
+- `fix-github-issue.md` - GitHub Issue修正
+- `fix-issue.md` - Issue修正用ワークフロー
+- `fix-pr.md` - PR修正
+- `pr-auto-update.md` - PR自動更新
+- `pr-create.md` - PR作成
+- `pr-feedback.md` - PRフィードバック
+- `pr-issue.md` - PR問題対応
+- `pr-list.md` - PR一覧表示
+- `pr-review.md` - PRレビュー
+
+**コード品質・分析**
+- `analyze-dependencies.md` - 依存関係分析
+- `analyze-performance.md` - パフォーマンス分析
+- `check-fact.md` - ファクトチェック
+- `check-github-ci.md` - GitHub CI確認
+- `explain-code.md` - コード説明
+- `optimize.md` - コードパフォーマンス分析
+- `refactor.md` - リファクタリング
+- `smart-review.md` - スマートレビュー
+- `tech-debt.md` - 技術的負債管理
+
+**設計・計画**
+- `design-patterns.md` - デザインパターン
+- `plan.md` - 計画策定
+- `show-plan.md` - 計画表示
+- `spec.md` - 仕様書作成
+
+**開発手法**
+- `tdd.md` - テスト駆動開発
+- `role.md` - ロール設定
+- `role-debate.md` - ロール議論
+- `role-help.md` - ロールヘルプ
+- `multi-role.md` - マルチロール
+- `task.md` - タスク管理
+
+**思考・分析ツール**
+- `sequential-thinking.md` - 段階的思考
+- `ultrathink.md` - 高度思考分析
+- `check-prompt.md` - プロンプト確認
+
+**依存関係更新**
+- `update-branch-name.md` - ブランチ名更新
+- `update-dart-doc.md` - Dart文書更新
+- `update-doc-string.md` - 文書文字列更新
+- `update-flutter-deps.md` - Flutter依存関係更新
+- `update-node-deps.md` - Node.js依存関係更新
+- `update-rust-deps.md` - Rust依存関係更新
+
+**ツール連携**
+- `context7.md` - Context7連携
+- `gdrive.md` - Google Drive操作
+- `screenshot.md` - スクリーンショット
+- `search-gemini.md` - Gemini検索
+- `serena.md` - Serena連携
+- `visualize.md` - 可視化ツール
+
+**文書・履歴**
+- `add-to-changelog.md` - CHANGELOG追加
+- `style-ai-writting.md` - AI文章スタイル
+- `weekly-note.md` - 週次レポート
 
 #### `scripts/` - 自動化スクリプト
 
