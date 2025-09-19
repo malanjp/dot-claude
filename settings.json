@@ -90,11 +90,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/scripts/enforce-uv.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/scripts/enforce-uv.sh"
           },
           {
             "type": "command",
-            "command": "~/.claude/scripts/deny-check.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/scripts/deny-check.sh"
           }
         ]
       },
@@ -103,7 +103,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/scripts/check-ai-commit.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/scripts/check-ai-commit.sh"
           }
         ]
       },
@@ -112,7 +112,17 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/scripts/preserve-file-permissions.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/scripts/preserve-file-permissions.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|Grep|Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/scripts/command_guard.sh",
+            "timeout": 10
           }
         ]
       }
@@ -123,7 +133,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/scripts/auto-comment.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/scripts/auto-comment.sh"
           }
         ]
       },
@@ -132,7 +142,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/scripts/preserve-file-permissions.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/scripts/preserve-file-permissions.sh"
           }
         ]
       }
@@ -154,11 +164,15 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/scripts/check-continue.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/scripts/check-continue.sh"
           },
           {
             "type": "command",
             "command": "osascript -e 'display notification \"タスク完了\" with title \"Claude Code\"' && afplay -v 0.3 ~/.claude/assets/perfect.mp3"
+          },
+          {
+            "type": "command",
+            "command": "echo \"[$(date)] タスク完了\" >> ~/.claude/work.log"
           }
         ]
       }
@@ -169,7 +183,16 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/CLAUDE.md を必ず読んでください"
+            "command": "$CLAUDE_PROJECT_DIR/.claude/CLAUDE.md を必ず読んでください"
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[$(date)] プロンプト送信\" >> ~/.claude/work.log"
           }
         ]
       }
