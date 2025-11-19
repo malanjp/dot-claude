@@ -198,7 +198,6 @@
       }
     ]
   },
-  "model": "opusplan",
   "statusLine": {
     "type": "command",
     "command": "bunx -y ccstatusline@latest",
